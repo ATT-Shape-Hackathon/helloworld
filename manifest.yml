@@ -1,4 +1,4 @@
 applications:
   - name: helloworld
-    random-route: true
-    memory: 128M
+    memory: 256M
+    command: bin/rails db:migrate && bin/rails server -p $PORT -e $RAILS_ENV
