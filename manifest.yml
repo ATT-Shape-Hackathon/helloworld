@@ -1,0 +1,4 @@
+applications:
+  - name: helloworld
+    random-route: true
+    memory: 128M
