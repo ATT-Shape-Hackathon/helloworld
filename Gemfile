@@ -36,9 +36,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
-# fallback to s3 if swift (not ios swift) storage fails
 gem 'aws-sdk'
-gem 'openstack'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
