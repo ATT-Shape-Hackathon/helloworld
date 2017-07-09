@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+  resources :ads
   devise_for :users
 
   root to: 'home#index'
 
+=begin
+Subdomain routing takes advantage of DNS routing which is
+faster than application routing.
+
+Can't do subdomain routing without owning a domain first.
   constraints subdomain: 'api' do
     # path as '/' lets us avoid duplication in route
     # without -- http://api.app.com/api/resource
@@ -18,4 +24,5 @@ Rails.application.routes.draw do
       end
     end
   end
+=end
 end
