@@ -1,4 +1,5 @@
 class AdsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
 
   # GET /ads
@@ -15,6 +16,8 @@ class AdsController < ApplicationController
   # GET /ads/new
   def new
     @ad = Ad.new
+    @uploader = User.new.ad
+    @uploader.success_action_redirect = root_url
   end
 
   # GET /ads/1/edit

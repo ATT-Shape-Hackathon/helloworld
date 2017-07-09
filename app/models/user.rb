@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :contracts
   has_many :contractees, through: :contracts
   has_many :contractors, through: :contracts
+
+  mount_uploader :ad, AdUploader
 end

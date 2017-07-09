@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     if user_signed_in?
       super
     else
-      redirect_to login_path, notice: 'Must login first'
+      redirect_to root_path, flash: { info: 'Must login to make that request' }
     end
   end
 end
