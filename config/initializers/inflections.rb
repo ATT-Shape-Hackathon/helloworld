@@ -11,6 +11,7 @@
 # end
 
 # These inflection rules are supported but not enabled by default:
-# ActiveSupport::Inflector.inflections(:en) do |inflect|
-#   inflect.acronym 'RESTful'
-# end
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+  # lets us name module in all caps for API
+  inflect.acronym 'API'
+end
