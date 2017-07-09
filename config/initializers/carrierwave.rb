@@ -6,4 +6,8 @@ CarrierWave.configure do |config|
     region: ENV['AWS_REGION']
   }
   config.fog_directory = ENV['AWS_S3_BUCKET']
+
+  config.will_include_content_type = true
+  config.default_content_type = 'video/mpeg'
+  config.allowed_content_types = %w(video/mpeg video/mp4 video/ogg)
 end
