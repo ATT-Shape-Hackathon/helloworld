@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   resources :ads
   devise_for :users
 
-  root to: 'home#index'
+  root 'home#index'
+
+  namespace 'api' do
+    resources :ads
+  end
 
 =begin
 Subdomain routing takes advantage of DNS routing which is
