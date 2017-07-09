@@ -43,7 +43,6 @@ gem 'carrierwave_direct' # dont block resources while uploading
 gem 'sidekiq'
 gem 'sprockets-rails'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
-gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
